@@ -2,6 +2,11 @@
 name = "modified_bbs_for_PoC"
 version = "0.1.0"
 edition = "2021"
+authors = ["kskhasegawa"]
+description = "The BBS+ signature scheme"
+readme = "README.md"
+license = "Apache-2.0"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
