@@ -318,7 +318,9 @@ pub(crate) fn hash_to_g2<I: AsRef<[u8]>>(data: I) -> G2 {
     <G2 as HashToCurve<ExpandMsgXmd<blake2::Blake2b>>>::hash_to_curve(data.as_ref(), DST)
 }
 
-pub(crate) fn hash_to_fr<I: AsRef<[u8]>>(data: I) -> Fr {
+// pub(crate) fn hash_to_fr<I: AsRef<[u8]>>(data: I) -> Fr {
+/// 
+pub fn hash_to_fr<I: AsRef<[u8]>>(data: I) -> Fr {
     let mut res = GenericArray::default();
     let mut hasher = blake2::VarBlake2b::new(FR_UNCOMPRESSED_SIZE).unwrap();
     hasher.input(data.as_ref());
