@@ -228,7 +228,8 @@ impl CommitmentBuilder {
 
 /// The type for messages
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-pub struct SignatureMessage(pub(crate) Fr);
+// pub struct SignatureMessage(pub(crate) Fr);
+pub struct SignatureMessage(pub Fr);
 
 impl SignatureMessage {
     to_fixed_length_bytes_impl!(SignatureMessage, Fr, FR_COMPRESSED_SIZE, FR_COMPRESSED_SIZE);
